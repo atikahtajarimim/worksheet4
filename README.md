@@ -7,31 +7,29 @@ This repository is the starter repository for the week 4 exploratory data analys
 - `README.md`: this file
 - `requirements.txt`: Python packages for the activity
 - `data/clean/store_week_clean.csv`: cleaned sample data for the activity
-- `code/worksheet4_eda_student.ipynb`: notebook for you to complete
-- `code/worksheet4_eda_sample_answers.ipynb`: sample answers notebook
+- `code/worksheet4_eda_student.ipynb`: notebook to complete
 - `output/`: save any figures or exported outputs here
-
-## Getting Started
-
-1. Create and activate a Python environment.
-2. Install the required packages with `pip install -r requirements.txt`.
-3. Open `code/worksheet4_eda_student.ipynb` in VS Code.
-4. Work through the notebook and save any figures you want to keep in `output/`.
-5. Update this `README.md` with what you find in the data.
 
 ## Analysis Notes
 
-Replace this section with your own notes after working through the notebook.
+### What files are in the repository?
+The repository contains the cleaned store dataset, the student analysis notebook, and an output folder with 6 exported PNG figures.
 
-Suggested headings:
+### What does the dataset appear to describe?
+The dataset describes weekly performance metrics for retail stores, specifically tracking labor hours, wages, and sales revenue across four geographic regions.
 
-- What files are in the repository?
-- What does the dataset appear to describe?
-- Which variables did you examine first?
-- What distributional patterns stood out?
-- What did the scatter plots and correlations suggest?
-- What changed when you adjusted the scale or plotted by group?
+### Which variables did you examine first?
+I examined `weekly_sales`, `total_hours`, and `avg_hourly_pay` to understand the basic distributions and ranges of the numeric data.
 
-## Git Reminder
+### What distributional patterns stood out?
+- `total_hours` and `avg_hourly_pay` show significant "heaping" at round numbers, indicating standardized staffing blocks.
+- `weekly_sales` follows a right-skewed distribution.
 
-All relevant changes should be committed and pushed back to your own GitHub repository.
+### What did the scatter plots and correlations suggest?
+The scatter plots showed a strong positive linear relationship between hours and sales (Pearson = 0.75). Pay also has a moderate positive correlation with sales (0.41).
+
+### What changed when you adjusted the scale or plotted by group?
+- **Scale:** Using a log scale on the y-axis (Sales) made it easier to compare the relationship across the full range of store sizes.
+- **Group:** Plotting by `staffing_model` revealed three distinct clusters, showing that the model type (Heavy vs. Standard vs. Light) is the main driver of performance.
+
+
